@@ -15,8 +15,8 @@ class Product:
         return self.__price
 
     @classmethod
-    def new_product(cls, name='name', description='description', price='price', quantity='quantity'):
-        return cls(name, description, price, quantity)
+    def new_product(cls, dict_product):
+        return cls(dict_product['name'], dict_product['description'], dict_product['price'], dict_product['quantity'])
 
     @price.setter
     def price(self, new_price: int):
