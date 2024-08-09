@@ -20,3 +20,4 @@ def test_price_update(capsys, product):
     product.price = -100
     message = capsys.readouterr()
     assert message.out.strip() == 'Цена не должна быть нулевая или отрицательная'
+    
