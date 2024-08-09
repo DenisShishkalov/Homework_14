@@ -26,7 +26,7 @@ class Category:
     def products(self):
         product_str = ''
         for product in self.__list_product:
-            product_str += f'{str(product)}'
+            product_str += f'\n{str(product)}'
         return product_str
 
     @property
