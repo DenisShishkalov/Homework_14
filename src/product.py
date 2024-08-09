@@ -3,12 +3,20 @@ class Product:
     description: str
     price: float
     quantity: int
+    sum_price: int
 
-    def __init__(self, name, description, price, quantity):
+    def __init__(self, name, description, price, quantity, sum_price=0):
         self.name = name
         self.description = description
         self.__price = price
         self.quantity = quantity
+        self.sum_price = sum_price
+
+    def __str__(self):
+        return f'{self.name}, {self.price} руб. Остаток: {self.quantity} шт.'
+
+    def __add__(self, other):
+        return self.sum_price + self.price * self.quantity + other.price * other.quantity
 
     @property
     def price(self):
